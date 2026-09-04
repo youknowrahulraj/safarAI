@@ -12,21 +12,10 @@ The platform focuses on a simple idea: **travel planning should feel inspiring, 
 
 ## 📸 Preview
 
-> Add your own screenshots to `docs/screenshots/` if you want the README to display exact project UI screenshots.
 
 ### Home / Hero
 
 ![SafarAI Home](https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80)
-
-### Destination Discovery
-
-![Travel Destination](https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80)
-
-### Mountain Travel
-
-![Mountain Travel](https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80)
-
----
 
 ## ✨ Features
 
