@@ -15,7 +15,7 @@ The platform focuses on a simple idea: **travel planning should feel inspiring, 
 
 ### Home / Hero
 
-![SafarAI Home](https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80)
+![SafarAI Home](![SafarAI Home](./media/Screenshot%202026-09-04%20235823.png))
 
 ## ✨ Features
 
