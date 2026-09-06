@@ -432,7 +432,7 @@ Explore → Choose → Plan → Travel
 
 The deployed website is hosted on **Vercel**. The exact source repository/framework is not exposed by the public deployment page, so the following describes the recommended implementation architecture rather than claiming an unseen source stack.
 
-### Recommended Frontend Stack
+### Frontend Stack
 
 ```text
 Frontend
@@ -443,7 +443,7 @@ Frontend
 └── Responsive UI
 ```
 
-### Recommended Backend
+### Backend
 
 ```text
 Backend
@@ -452,7 +452,7 @@ Backend
 ├── Python / FastAPI
 ```
 
-### Recommended Database
+### Database
 
 ```text
 Database
@@ -460,7 +460,7 @@ Database
 └── Redis (optional caching)
 ```
 
-### Recommended AI Layer
+### AI Layer
 
 ```text
 AI Trip Planner
@@ -512,7 +512,7 @@ User
 
 ---
 
-# 🗄️ Suggested Database Design
+# 🗄️ Database Design
 
 A scalable backend could use the following entities:
 
@@ -710,7 +710,7 @@ and keep `.env` files out of version control.
 
 ---
 
-# 📁 Recommended Project Structure
+# 📁 Project Structure
 
 For a scalable implementation, the project can follow:
 
@@ -1056,7 +1056,7 @@ git push origin feature/new-feature
 
 Then open a Pull Request.
 
-### Suggested commit format
+### commit format
 
 ```text
 feat: add destination carousel
@@ -1070,13 +1070,7 @@ refactor: reorganize components
 
 # 📄 License
 
-Add your preferred license here.
-
-For example:
-
-```text
 MIT License
-```
 
 ---
 
