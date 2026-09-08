@@ -20,7 +20,144 @@ menuBtn.addEventListener("click", () => {
     }
 
 });
+const chatButton =
+    document.getElementById("aiChatButton");
 
+const chatBox =
+    document.getElementById("aiChatbox");
+
+const closeChat =
+    document.getElementById("closeChat");
+
+const sendMessage =
+    document.getElementById("sendMessage");
+
+const chatInput =
+    document.getElementById("chatInput");
+
+const chatMessages =
+    document.getElementById("chatMessages");
+
+ /* =========================
+   AI CHATBOX
+========================= */
+
+
+/* OPEN CHAT */
+
+chatButton.addEventListener("click", () => {
+    chatBox.classList.add("active");
+    chatInput.focus();
+});
+
+
+/* CLOSE CHAT */
+
+closeChat.addEventListener("click", () => {
+    chatBox.classList.remove("active");
+});
+
+
+/* SEND MESSAGE */
+
+sendMessage.addEventListener("click", sendChat);
+
+chatInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+        sendChat();
+    }
+
+});
+
+
+async function sendChat() {
+
+    const message =
+        chatInput.value.trim();
+
+    if (!message) return;
+
+
+    /* USER MESSAGE */
+
+    addMessage(message, "user");
+
+    chatInput.value = "";
+
+
+    /* TYPING */
+
+    const typing =
+        addMessage("SafarAI is thinking...", "bot");
+
+
+    try {
+
+        const response = await fetch(
+            "/api/chat",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    message: message
+                })
+            }
+        );
+
+
+        const data =
+            await response.json();
+
+
+        typing.remove();
+
+
+        addMessage(
+            data.reply,
+            "bot"
+        );
+
+
+    } catch (error) {
+
+        typing.remove();
+
+        addMessage(
+            "Sorry, I couldn't connect right now. Please try again.",
+            "bot"
+        );
+
+    }
+
+}
+
+
+/* ADD MESSAGE */
+
+function addMessage(text, type) {
+
+    const message =
+        document.createElement("div");
+
+    message.className =
+        type === "user"
+            ? "user-message"
+            : "bot-message";
+
+    message.textContent = text;
+
+    chatMessages.appendChild(message);
+
+    chatMessages.scrollTop =
+        chatMessages.scrollHeight;
+
+    return message;
+}
 
 document.querySelectorAll(".mobile-menu a").forEach(link => {
 
